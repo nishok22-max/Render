@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* New Color System */
+  --color-background: #0D0D0D;
+  --color-surface: #151515;
+  --color-surface-elevated: #1B1B1B;
+  --color-sidebar: #111111;
+  
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+  
+  /* Text */
+  --color-text-primary: rgba(255, 255, 255, 0.92);
+  --color-text-secondary: rgba(255, 255, 255, 0.62);
+  --color-text-tertiary: rgba(255, 255, 255, 0.38);
+
+  /* Accents */
+  --color-primary: #ECECEC; /* Monochrome highlight */
+  --color-primary-hover: #FFFFFF;
+  --color-accent: #10A37F; /* Soft OpenAI green */
+  --color-accent-blue: #3B82F6; /* Muted neutral blue */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary antialiased font-sans text-sm;
+  }
+}
+
+@layer components {
+  /* Minimal Flat Panel */
+  .panel {
+    @apply bg-surface border border-border rounded-lg;
+  }
+  
+  .panel-elevated {
+    @apply bg-surface-elevated border border-border rounded-xl shadow-sm;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Replaced old legacy classes to prevent breaking existing components before they are refactored */
+  .glass-panel {
+    @apply bg-surface-elevated border border-border rounded-xl shadow-sm;
+  }
+  
+  .atmospheric-shadow {
+    @apply shadow-none;
+  }
+  
+  .halo-focus {
+    @apply transition-colors duration-200;
+  }
+  
+  .halo-focus:focus-within {
+    @apply border-border-hover outline-none;
+  }
+  
+  .gold-text {
+    @apply text-primary font-medium not-italic;
+  }
+  
+  .tracking-luxury {
+    @apply tracking-wide uppercase text-[11px] font-medium text-text-secondary;
+  }
+  
+  .serif {
+    @apply font-sans;
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+@keyframes agent-ping {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.animate-agent-ping {
+  animation: agent-ping 1.4s ease-in-out infinite;
+}
+

@@ -1,0 +1,40 @@
+# ── Secrets (NEVER commit) ───────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+*.log
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+dist/
+.next/
+out/
+coverage/
+
+# ── Uploads (user files, not source code) ────────────────────────────────────
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ── OS & Editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+
+# ── Scratch / temp ────────────────────────────────────────────────────────────
+scratch/
+backend/scratch/
