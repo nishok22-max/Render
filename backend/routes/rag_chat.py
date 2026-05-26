@@ -1,5 +1,5 @@
 """
-Aetheris OS — /api/rag (Optimized)
+ThinkSync OS — /api/rag (Optimized)
 Isolated RAG Agent — Neural Knowledge Base.
 
 OPTIMIZATIONS:
@@ -27,7 +27,7 @@ from app_config import settings
 from rag.vector_store import get_supabase
 from rag import PerfTimer, retrieval_cache
 
-logger = logging.getLogger("aetheris.rag_agent")
+logger = logging.getLogger("thinksync.rag_agent")
 router = APIRouter()
 
 RAG_UPLOAD_DIR = os.path.join(settings.UPLOAD_DIR, "rag_agent")

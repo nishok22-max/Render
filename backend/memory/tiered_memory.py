@@ -1,5 +1,5 @@
 """
-Aetheris OS — Tiered Memory System (Sprint 3)
+ThinkSync OS — Tiered Memory System (Sprint 3)
 
 Replaces the volatile in-process defaultdict with a three-tier architecture:
 
@@ -22,7 +22,7 @@ import time
 from collections import defaultdict
 from typing import Dict, List, Optional, Tuple
 
-logger = logging.getLogger("aetheris.tiered_memory")
+logger = logging.getLogger("thinksync.tiered_memory")
 
 # ─── L1: In-process message store ────────────────────────────────────────────
 

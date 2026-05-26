@@ -1,5 +1,5 @@
 """
-Aetheris OS — Vision Endpoint (DEPRECATED)
+ThinkSync OS — Vision Endpoint (DEPRECATED)
 
 All vision analysis is now routed through /api/chat → orchestrator → analyze_image().
 These endpoints are kept for backward compatibility only but are not called by any

@@ -1,5 +1,5 @@
 """
-Aetheris OS — Vision Analysis Agent
+ThinkSync OS — Vision Analysis Agent
 Image understanding using Gemini Vision.
 """
 import base64

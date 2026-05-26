@@ -1,4 +1,4 @@
--- Aetheris OS — Fix RPC Overload Ambiguity (Migration 005)
+-- ThinkSync OS — Fix RPC Overload Ambiguity (Migration 005)
 -- Run this in Supabase SQL Editor
 --
 -- Problem: Two versions of match_rag_chunks / match_chunks exist with

@@ -1,5 +1,5 @@
 """
-Aetheris OS — /api/upload (Optimized)
+ThinkSync OS — /api/upload (Optimized)
 Document upload endpoint with full RAG ingestion pipeline.
 
 OPTIMIZATIONS:
@@ -19,7 +19,7 @@ from app_config import settings
 from rag.vector_store import get_supabase
 from rag import PerfTimer, retrieval_cache
 
-logger = logging.getLogger("aetheris.upload")
+logger = logging.getLogger("thinksync.upload")
 router = APIRouter()
 
 ALLOWED_EXTENSIONS = {

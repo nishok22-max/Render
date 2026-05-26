@@ -1,5 +1,5 @@
 """
-Aetheris OS — BaseAgent (Sprint 3)
+ThinkSync OS — BaseAgent (Sprint 3)
 
 Abstract base class enforcing namespace isolation across all agents.
 Every agent inherits this — memory, toolset, and session scope are
@@ -16,7 +16,7 @@ import logging
 from abc import ABC, abstractmethod
 from typing import Any, AsyncGenerator, Dict, List, Optional
 
-logger = logging.getLogger("aetheris.base_agent")
+logger = logging.getLogger("thinksync.base_agent")
 
 
 class AgentContext:
@@ -74,7 +74,7 @@ class AgentResult:
 
 class BaseAgent(ABC):
     """
-    Abstract base for all Aetheris agents.
+    Abstract base for all ThinkSync agents.
 
     Subclasses MUST declare:
         agent_id  = "unique_agent_name"
@@ -89,7 +89,7 @@ class BaseAgent(ABC):
 
     def __init__(self, session_id: str):
         self.session_id = session_id
-        self._log       = logging.getLogger(f"aetheris.agent.{self.agent_id}")
+        self._log       = logging.getLogger(f"thinksync.agent.{self.agent_id}")
 
     # ─── Memory (isolated to namespace) ──────────────────────────────────────
 

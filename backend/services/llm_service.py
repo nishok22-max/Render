@@ -1,5 +1,5 @@
 """
-Aetheris OS — LLM Service
+ThinkSync OS — LLM Service
 Primary: AWS Bedrock — moonshotai.kimi-k2.5
 Fallback: Google Gemini (generativelanguage.googleapis.com)
 
@@ -19,7 +19,7 @@ from typing import AsyncGenerator, Optional
 import httpx
 from app_config import settings
 
-logger = logging.getLogger("aetheris.llm")
+logger = logging.getLogger("thinksync.llm")
 
 # ─── Bedrock constants ────────────────────────────────────────────────────────
 
@@ -517,7 +517,7 @@ async def _gemini_stream(payload: dict) -> AsyncGenerator[str, None]:
 #  Public API — all agents / routes call ONLY these functions
 # ─────────────────────────────────────────────────────────────────────────────
 
-AETHERIS_SYSTEM = (
+THINKSYNC_SYSTEM = (
     "You are ThinkSync, a smart and friendly AI assistant. "
     "You help users with conversations, reasoning, tasks, and general questions. "
     "Be natural, clear, and easy to understand. "
@@ -540,7 +540,7 @@ async def generate(
     1. Try Bedrock / Kimi K2.5
     2. Fall back to Gemini if Bedrock fails
     """
-    system = system_instruction or AETHERIS_SYSTEM
+    system = system_instruction or THINKSYNC_SYSTEM
 
     # ── Primary: Bedrock ──────────────────────────────────────────────────────
     logger.info("[LLM] generate — primary=Bedrock, prompt_len=%d", len(prompt))
@@ -568,7 +568,7 @@ async def generate_stream(
     1. Try Bedrock ConverseStream / Kimi K2.5 (binary event-stream protocol)
     2. Fall back to Gemini SSE stream if Bedrock yields nothing
     """
-    system  = system_instruction or AETHERIS_SYSTEM
+    system  = system_instruction or THINKSYNC_SYSTEM
     payload = _bedrock_text_payload(prompt, system, temperature, max_tokens)
 
     logger.info("[LLM] generate_stream — primary=Bedrock, prompt_len=%d", len(prompt))
@@ -599,7 +599,7 @@ async def generate_chat(
     Accepts messages[] array: [{"role": "user"|"assistant", "content": str}]
     Preserves full conversation structure for proper multi-turn reasoning.
     """
-    system = system_instruction or AETHERIS_SYSTEM
+    system = system_instruction or THINKSYNC_SYSTEM
 
     # Primary: Bedrock
     logger.info("[LLM] generate_chat — primary=Bedrock, turns=%d", len(messages))
@@ -624,7 +624,7 @@ async def generate_chat_stream(
     Stream a response from a structured multi-turn conversation.
     Accepts messages[] array for proper Bedrock Converse multi-turn.
     """
-    system = system_instruction or AETHERIS_SYSTEM
+    system = system_instruction or THINKSYNC_SYSTEM
     payload = _bedrock_chat_payload(messages, system, temperature, max_tokens)
 
     logger.info("[LLM] generate_chat_stream — primary=Bedrock, turns=%d", len(messages))
@@ -656,7 +656,7 @@ async def analyze_image(
     1. Try Bedrock / Kimi K2.5 (vision via Converse API)
     2. Fall back to Gemini Vision
     """
-    system = system_instruction or AETHERIS_SYSTEM
+    system = system_instruction or THINKSYNC_SYSTEM
 
     # ── Primary: Bedrock vision ───────────────────────────────────────────────
     logger.info(

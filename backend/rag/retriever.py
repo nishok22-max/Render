@@ -1,5 +1,5 @@
 """
-Aetheris OS — RAG Retriever (Optimized)
+ThinkSync OS — RAG Retriever (Optimized)
 Retrieves relevant document chunks with caching and profiling.
 
 OPTIMIZATIONS:
@@ -17,7 +17,7 @@ from rag.vector_store import similarity_search
 from rag import PerfTimer, retrieval_cache
 from app_config import settings
 
-logger = logging.getLogger("aetheris.retriever")
+logger = logging.getLogger("thinksync.retriever")
 
 
 def _cache_key(query: str, top_k: int, doc_id: Optional[str]) -> str:

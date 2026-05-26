@@ -1,4 +1,4 @@
--- Aetheris OS — RAG Agent Isolated Vector Search
+-- ThinkSync OS — RAG Agent Isolated Vector Search
 -- Run this in the Supabase SQL Editor AFTER 001_init.sql
 --
 -- This function restricts similarity search to documents with category='rag_agent'

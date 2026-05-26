@@ -1,4 +1,4 @@
--- Aetheris OS — Performance Indexes (Sprint 4)
+-- ThinkSync OS — Performance Indexes (Sprint 4)
 -- Run this in Supabase SQL Editor
 
 -- ── Vector search performance ──────────────────────────────────────────────────

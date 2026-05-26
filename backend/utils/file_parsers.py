@@ -1,5 +1,5 @@
 """
-Aetheris OS — File Parsers
+ThinkSync OS — File Parsers
 Extracts text content from various file types.
 """
 import os

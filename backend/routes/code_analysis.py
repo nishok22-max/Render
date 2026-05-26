@@ -1,5 +1,5 @@
 """
-Aetheris OS — Code Analysis Endpoint
+ThinkSync OS — Code Analysis Endpoint
 Code intelligence powered by Gemini.
 """
 from fastapi import APIRouter

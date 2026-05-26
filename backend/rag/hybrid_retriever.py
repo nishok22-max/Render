@@ -1,5 +1,5 @@
 """
-Aetheris OS — Unified Hybrid Retriever (Sprint 2 — Full Implementation)
+ThinkSync OS — Unified Hybrid Retriever (Sprint 2 — Full Implementation)
 Single source of truth for ALL RAG retrieval across the platform.
 
 RETRIEVAL PIPELINE:
@@ -26,7 +26,7 @@ from typing import Dict, List, Optional, Tuple
 from app_config import settings
 from rag import PerfTimer
 
-logger = logging.getLogger("aetheris.hybrid_retriever")
+logger = logging.getLogger("thinksync.hybrid_retriever")
 
 
 # ─── BM25 in-memory index ─────────────────────────────────────────────────────

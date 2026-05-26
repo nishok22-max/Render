@@ -1,4 +1,4 @@
--- Aetheris OS — Supabase Database Migration
+-- ThinkSync OS — Supabase Database Migration
 -- Run this in the Supabase SQL Editor
 
 -- Enable pgvector

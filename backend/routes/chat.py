@@ -1,5 +1,5 @@
 """
-Aetheris OS — /api/chat
+ThinkSync OS — /api/chat
 Multimodal chat endpoint with SSE streaming.
 
 All requests now flow through the Orchestrator, which detects intent and
@@ -27,7 +27,7 @@ from pydantic import BaseModel
 from agents.orchestrator import route_request
 from memory.tiered_memory import tiered_memory as session_memory
 
-logger = logging.getLogger("aetheris.chat")
+logger = logging.getLogger("thinksync.chat")
 router = APIRouter()
 
 # ─── Request models ───────────────────────────────────────────────────────────

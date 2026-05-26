@@ -1,5 +1,5 @@
 """
-Aetheris OS — AI Utility Routes
+ThinkSync OS — AI Utility Routes
 Convenience endpoints for PDF analysis and structured JSON generation.
 """
 import base64

@@ -1,5 +1,5 @@
 """
-Aetheris OS — Session Memory
+ThinkSync OS — Session Memory
 Manages conversation context for each session.
 """
 from typing import List, Dict, Optional

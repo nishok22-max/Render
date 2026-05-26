@@ -241,7 +241,7 @@ export async function getDynamicSuggestedTopics(): Promise<string[]> {
   const MAX_IMPRESSIONS = 2;
   const COOLDOWN_REFRESHES = 10;
   const RETURN_COUNT = 8;
-  const STATE_KEY = 'aetheris_topic_state';
+  const STATE_KEY = 'thinksync_topic_state';
 
   // Load state
   let state: TopicState = { impressions: {}, cooldowns: {} };

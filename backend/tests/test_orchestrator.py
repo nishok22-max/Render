@@ -1,5 +1,5 @@
 """
-Aetheris OS — Whitebox Tests: AI Chat / RAG Isolation
+ThinkSync OS — Whitebox Tests: AI Chat / RAG Isolation
 Verifies strict separation between the AI Chat brain and RAG Agent brain.
 
 ISOLATION RULES TESTED:

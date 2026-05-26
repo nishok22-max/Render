@@ -1,4 +1,4 @@
--- Aetheris OS — Research Sessions Table Migration
+-- ThinkSync OS — Research Sessions Table Migration
 -- Run this in Supabase SQL Editor
 
 CREATE TABLE IF NOT EXISTS research_sessions (

@@ -1,4 +1,4 @@
--- Aetheris OS — Fix RAG Retrieval Functions
+-- ThinkSync OS — Fix RAG Retrieval Functions
 -- Run this in the Supabase SQL Editor AFTER 001_init.sql and 002_rag_agent.sql
 --
 -- Fixes:

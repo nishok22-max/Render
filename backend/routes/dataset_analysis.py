@@ -1,5 +1,5 @@
 """
-Aetheris OS — /api/dataset
+ThinkSync OS — /api/dataset
 Dataset analysis endpoint (CSV, JSON, Excel).
 """
 from fastapi import APIRouter, UploadFile, File, HTTPException

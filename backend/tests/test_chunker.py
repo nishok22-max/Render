@@ -1,5 +1,5 @@
 """
-Aetheris OS — Whitebox Tests: Chunker (Final Fix)
+ThinkSync OS — Whitebox Tests: Chunker (Final Fix)
 Verifies text splitting logic and boundary preservation.
 """
 import pytest

@@ -1,4 +1,4 @@
-# Aetheris OS — Complete Project Documentation
+# ThinkSync OS — Complete Project Documentation
 
 > **Multimodal AI Research Platform with Autonomous Agent Orchestration**
 >
@@ -29,7 +29,7 @@
 19. [Future Enhancements](#19-future-enhancements)
 20. [Expo Presentation Guide](#20-expo-presentation-guide)
 21. [Jury Convincing Points](#21-jury-convincing-points)
-22. [Why Choose Aetheris OS Over Other AI Tools](#22-why-choose-aetheris-os-over-other-ai-tools)
+22. [Why Choose ThinkSync OS Over Other AI Tools](#22-why-choose-thinksync-os-over-other-ai-tools)
 23. [Monetization Possibilities](#23-monetization-possibilities)
 24. [Deployment Architecture](#24-deployment-architecture)
 25. [Folder Structure](#25-folder-structure)
@@ -42,7 +42,7 @@
 
 ## 1. Project Overview
 
-**Aetheris OS** is a full-stack multimodal AI research platform that functions as an intelligent operating system for knowledge work. It doesn't just answer questions — it *researches, reads documents, analyzes images, writes code, and remembers everything you've discussed.*
+**ThinkSync OS** is a full-stack multimodal AI research platform that functions as an intelligent operating system for knowledge work. It doesn't just answer questions — it *researches, reads documents, analyzes images, writes code, and remembers everything you've discussed.*
 
 At its core sits a fleet of **8 specialized AI agents** coordinated by a central Orchestrator. When you ask a question, the system classifies your intent, selects the right agent (or combination of agents), retrieves relevant context from your uploaded documents, and streams back a grounded, cited response in real-time.
 
@@ -62,13 +62,13 @@ Current AI tools address this partially:
 - **Notion AI / Copilot** — work within their ecosystems but can't do autonomous multi-step research
 - **Custom RAG tools** — handle document Q&A but lack multi-agent intelligence and vision capabilities
 
-**The core gap:** No single platform combines *autonomous research, document-grounded Q&A, multimodal vision, code analysis, and persistent memory* in one unified environment. Aetheris OS fills that gap.
+**The core gap:** No single platform combines *autonomous research, document-grounded Q&A, multimodal vision, code analysis, and persistent memory* in one unified environment. ThinkSync OS fills that gap.
 
 ---
 
 ## 3. Existing System vs Proposed System
 
-| Dimension | Existing Solutions | Aetheris OS |
+| Dimension | Existing Solutions | ThinkSync OS |
 |---|---|---|
 | **Intelligence** | Single monolithic model | 8 specialized agents with orchestrated routing |
 | **Document Understanding** | Upload limits, basic retrieval, no citations | Full RAG: semantic chunking + hybrid retrieval + reranking + citations |
@@ -421,9 +421,9 @@ Events: `session`, `agent_status`, `token`, `citations`, `agent_info`, `source_f
 
 ---
 
-## 22. Why Choose Aetheris OS Over Other AI Tools
+## 22. Why Choose ThinkSync OS Over Other AI Tools
 
-| Pain Point | Others | Aetheris OS |
+| Pain Point | Others | ThinkSync OS |
 |---|---|---|
 | "I need deep research" | Manual multi-tab process | One-click autonomous research with live progress |
 | "Answer from my documents" | Basic retrieval, no citations | Full RAG with hybrid search + reranking + citations |
@@ -511,7 +511,7 @@ Aether-main/
 
 ## 27. Elevator Pitch
 
-> *"Aetheris OS is an AI research operating system. Instead of a single chatbot, we run 8 specialized agents — researcher, document analyst, code reviewer, vision system — coordinated by an intelligent orchestrator.*
+> *"ThinkSync OS is an AI research operating system. Instead of a single chatbot, we run 8 specialized agents — researcher, document analyst, code reviewer, vision system — coordinated by an intelligent orchestrator.*
 >
 > *Upload documents, ask questions, and the system figures out which agent to use, retrieves relevant context with a production RAG pipeline, and streams cited responses in real-time. It even does autonomous deep research — give it a topic and it plans, searches, analyzes, and synthesizes a full report.*
 >
@@ -521,7 +521,7 @@ Aether-main/
 
 ## 28. Demo Script
 
-**0:00 — Dashboard (30s):** "This is Aetheris OS — mission control for AI research."
+**0:00 — Dashboard (30s):** "This is ThinkSync OS — mission control for AI research."
 
 **0:30 — Upload (45s):** Drag-drop a PDF. "Automatically parsed, chunked, embedded, and stored in our vector database."
 
@@ -531,7 +531,7 @@ Aether-main/
 
 **4:15 — Architecture (30s):** "Under the hood: 8 specialized agents, hybrid RAG with semantic chunking and reranking, three-tier memory that gets smarter over time."
 
-**4:45 — Close (15s):** "Aetheris OS: not a chatbot — a research operating system."
+**4:45 — Close (15s):** "ThinkSync OS: not a chatbot — a research operating system."
 
 ---
 
@@ -562,4 +562,4 @@ SaaS (Free → Pro $19/mo → Team $49/user/mo → Enterprise), API-as-a-Service
 
 > *Built with precision. Presented with purpose.*
 >
-> *Aetheris OS — The Intelligent Research Operating System.*
+> *ThinkSync OS — The Intelligent Research Operating System.*

@@ -1,5 +1,5 @@
 """
-Aetheris OS — Research Endpoint (v5 — Sprint 4: Real Token Streaming)
+ThinkSync OS — Research Endpoint (v5 — Sprint 4: Real Token Streaming)
 
 UPGRADES:
   - research_stream() now uses deep_research_stream() for true LLM token streaming
@@ -23,7 +23,7 @@ router = APIRouter()
 
 # ─── Session persistence (Supabase-backed, in-memory fallback) ────────────────
 
-_log = _logging.getLogger("aetheris.research")
+_log = _logging.getLogger("thinksync.research")
 _sessions_fallback: Dict[str, Dict] = {}
 
 

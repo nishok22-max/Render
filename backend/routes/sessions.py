@@ -1,5 +1,5 @@
 """
-Aetheris OS — Sessions Route
+ThinkSync OS — Sessions Route
 Full conversation persistence: create, list, title generation, message storage.
 """
 from fastapi import APIRouter
@@ -11,7 +11,7 @@ import logging
 from rag.vector_store import get_supabase
 from memory.tiered_memory import tiered_memory as session_memory
 
-logger = logging.getLogger("aetheris.sessions")
+logger = logging.getLogger("thinksync.sessions")
 router = APIRouter()
 
 

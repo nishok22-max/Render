@@ -1,5 +1,5 @@
 """
-Aetheris OS — Documents Endpoint
+ThinkSync OS — Documents Endpoint
 Lists and manages uploaded documents, including chunk cleanup on delete.
 """
 import os

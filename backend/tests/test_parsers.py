@@ -1,5 +1,5 @@
 """
-Aetheris OS — Whitebox Tests: File Parsers
+ThinkSync OS — Whitebox Tests: File Parsers
 Verifies content extraction from various formats.
 """
 import pytest

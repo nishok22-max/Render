@@ -1,5 +1,5 @@
 """
-Aetheris OS — File Processor Agent (Sprint 2 — Semantic Chunking)
+ThinkSync OS — File Processor Agent (Sprint 2 — Semantic Chunking)
 Handles parsing and chunking of uploaded documents for RAG ingestion.
 
 UPGRADES:
@@ -17,7 +17,7 @@ from concurrent.futures import ThreadPoolExecutor
 from app_config import settings
 from rag import PerfTimer
 
-logger = logging.getLogger("aetheris.file_processor")
+logger = logging.getLogger("thinksync.file_processor")
 
 _parse_executor = ThreadPoolExecutor(max_workers=2, thread_name_prefix="parser")
 

@@ -1,5 +1,5 @@
 """
-Aetheris OS — Text Chunker (Optimized)
+ThinkSync OS — Text Chunker (Optimized)
 Splits text into overlapping chunks for embedding and retrieval.
 
 OPTIMIZATIONS:
@@ -15,7 +15,7 @@ import asyncio
 import logging
 from concurrent.futures import ThreadPoolExecutor
 
-logger = logging.getLogger("aetheris.chunker")
+logger = logging.getLogger("thinksync.chunker")
 
 # Pre-compiled patterns for speed
 _MULTI_NEWLINE = re.compile(r'\n{3,}')

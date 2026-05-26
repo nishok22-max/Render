@@ -1,5 +1,5 @@
 """
-Aetheris OS — Groq Service
+ThinkSync OS — Groq Service
 Fast inference via Groq API for text generation (Llama, Mixtral, etc.)
 Used as a fallback/supplementary model when Gemini is unavailable.
 """

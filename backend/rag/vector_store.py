@@ -1,5 +1,5 @@
 """
-Aetheris OS — RAG Vector Store (Optimized)
+ThinkSync OS — RAG Vector Store (Optimized)
 Supabase pgvector integration with batch upserts and profiling.
 """
 from typing import List, Dict, Optional
@@ -9,7 +9,7 @@ from supabase import create_client, Client
 from app_config import settings
 from rag import PerfTimer
 
-logger = logging.getLogger("aetheris.vector_store")
+logger = logging.getLogger("thinksync.vector_store")
 
 _client: Optional[Client] = None
 _UPSERT_BATCH_SIZE = 500

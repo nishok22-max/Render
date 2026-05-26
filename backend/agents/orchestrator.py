@@ -1,5 +1,5 @@
 """
-Aetheris OS — Orchestrator Agent (Sprint 3 — Semantic Intent)
+ThinkSync OS — Orchestrator Agent (Sprint 3 — Semantic Intent)
 
 UPGRADES:
   - LLM-based semantic intent classifier (replaces keyword substring matching)
@@ -14,7 +14,7 @@ import base64
 import logging
 from typing import AsyncGenerator, Dict, List, Optional
 
-logger = logging.getLogger("aetheris.orchestrator")
+logger = logging.getLogger("thinksync.orchestrator")
 
 # ─── Extension sets ───────────────────────────────────────────────────────────
 
@@ -29,7 +29,7 @@ SCIENTIFIC_EXTENSIONS = {"pkl", "pickle", "joblib"}
 
 # ─── Chat system prompt ───────────────────────────────────────────────────────
 
-CHAT_SYSTEM_PROMPT = """You are Aetheris OS — a brilliant, warm AI assistant that explains everything like a smart human teacher.
+CHAT_SYSTEM_PROMPT = """You are ThinkSync OS — a brilliant, warm AI assistant that explains everything like a smart human teacher.
 
 ## YOUR PERSONALITY
 - You're like a knowledgeable friend: confident, relaxed, and genuinely helpful.

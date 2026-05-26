@@ -1,5 +1,5 @@
 """
-Aetheris OS — Web Research Agent
+ThinkSync OS — Web Research Agent
 Performs real-time web search using Tavily API.
 """
 from typing import Dict, List, Optional

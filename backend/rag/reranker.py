@@ -1,5 +1,5 @@
 """
-Aetheris OS — Advanced Reranker (Sprint 2)
+ThinkSync OS — Advanced Reranker (Sprint 2)
 
 Replaces the slow LLM batch scorer with a tiered cross-encoder strategy:
   Tier 1: Cohere Rerank v3.5   (~100-150ms, best quality)
@@ -17,7 +17,7 @@ from typing import List, Dict, Optional
 
 from app_config import settings
 
-logger = logging.getLogger("aetheris.reranker")
+logger = logging.getLogger("thinksync.reranker")
 
 
 # ─── Tier 1: Cohere Reranker ──────────────────────────────────────────────────

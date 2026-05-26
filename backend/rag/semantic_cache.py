@@ -1,5 +1,5 @@
 """
-Aetheris OS — Semantic Similarity Cache (Sprint 2)
+ThinkSync OS — Semantic Similarity Cache (Sprint 2)
 
 Replaces exact-match MD5 cache with embedding-similarity based lookup.
 Catches paraphrased queries that the old cache missed entirely.
@@ -22,7 +22,7 @@ import time
 from collections import OrderedDict
 from typing import Any, Dict, List, Optional, Tuple
 
-logger = logging.getLogger("aetheris.semantic_cache")
+logger = logging.getLogger("thinksync.semantic_cache")
 
 
 def _cosine_similarity(a: List[float], b: List[float]) -> float:

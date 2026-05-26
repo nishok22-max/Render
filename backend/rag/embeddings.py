@@ -1,5 +1,5 @@
 """
-Aetheris OS — RAG Embeddings (Optimized)
+ThinkSync OS — RAG Embeddings (Optimized)
 Generates text embeddings using Gemini embedding models.
 
 OPTIMIZATIONS:
@@ -18,7 +18,7 @@ import httpx
 from app_config import settings
 from rag import PerfTimer
 
-logger = logging.getLogger("aetheris.embeddings")
+logger = logging.getLogger("thinksync.embeddings")
 
 # ── Current Gemini Embedding Models (v1beta) ────────────────────────────────
 # Ordered fallback: fastest first, then more capable

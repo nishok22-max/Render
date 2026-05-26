@@ -1,11 +1,11 @@
 """
-Aetheris OS — Code Intelligence Agent
+ThinkSync OS — Code Intelligence Agent
 Elite coding assistant: generates, debugs, optimizes, reviews, and explains code.
 """
 from typing import Dict, AsyncGenerator
 from services.llm_service import generate, generate_stream
 
-CODE_SYSTEM_PROMPT = """You are Aetheris — an elite senior software engineer and coding assistant.
+CODE_SYSTEM_PROMPT = """You are ThinkSync — an elite senior software engineer and coding assistant.
 
 PERSONALITY:
 - You're a brilliant, experienced developer who genuinely enjoys helping people write better code.

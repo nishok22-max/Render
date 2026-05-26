@@ -1,8 +1,8 @@
 """
-Aetheris OS — Response Refiner (Sprint 4)
+ThinkSync OS — Response Refiner (Sprint 4)
 
 Post-processing layer that strips robotic LLM openers and enforces
-the Aetheris voice across all agent outputs.
+the ThinkSync voice across all agent outputs.
 
 Applied as a thin pass after any LLM response — no latency cost.
 """

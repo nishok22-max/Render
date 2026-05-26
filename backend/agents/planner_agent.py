@@ -1,5 +1,5 @@
 """
-Aetheris OS — Planner Agent (Sprint 3)
+ThinkSync OS — Planner Agent (Sprint 3)
 
 Multi-step goal decomposition and plan execution engine.
 Breaks complex user intents into ordered steps, executes each,
@@ -18,7 +18,7 @@ from typing import AsyncGenerator, Dict, List, Optional
 
 from agents.base_agent import BaseAgent, AgentContext, AgentResult
 
-logger = logging.getLogger("aetheris.planner")
+logger = logging.getLogger("thinksync.planner")
 
 
 # ─── Plan step types ──────────────────────────────────────────────────────────

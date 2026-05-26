@@ -21,10 +21,11 @@ build/
 
 # ── Node / Frontend ───────────────────────────────────────────────────────────
 node_modules/
-dist/
-.next/
-out/
-coverage/
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
+frontend/out/
+frontend/coverage/
 
 # ── Uploads (user files, not source code) ────────────────────────────────────
 backend/uploads/*

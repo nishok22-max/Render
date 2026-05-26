@@ -1,5 +1,5 @@
 """
-Aetheris OS — Semantic Parent-Child Chunker (Sprint 2)
+ThinkSync OS — Semantic Parent-Child Chunker (Sprint 2)
 
 Replaces fixed-size character chunking with semantic boundary awareness.
 
@@ -17,7 +17,7 @@ import re
 import logging
 from typing import List, Tuple, Dict, Optional
 
-logger = logging.getLogger("aetheris.semantic_chunker")
+logger = logging.getLogger("thinksync.semantic_chunker")
 
 
 # ─── Heading pattern ─────────────────────────────────────────────────────────

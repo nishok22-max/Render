@@ -415,9 +415,10 @@ export const ChatPage = () => {
     setStreaming(true);
 
     // Persist user message to backend
-    if (sessionId) {
-      chatService.saveMessage(sessionId, 'user', userMsg.content);
-    }
+    // Removed because backend automatically saves it
+    // if (sessionId) {
+    //   chatService.saveMessage(sessionId, 'user', userMsg.content);
+    // }
 
     // Add placeholder assistant message
     const assistantId = crypto.randomUUID();
@@ -456,9 +457,10 @@ export const ChatPage = () => {
           clearImageAttachments();
 
           // Persist assistant message
-          if (currentSessionId) {
-            chatService.saveMessage(currentSessionId, 'assistant', response.message.content);
-          }
+          // Removed because backend automatically saves it
+          // if (currentSessionId) {
+          //   chatService.saveMessage(currentSessionId, 'assistant', response.message.content);
+          // }
 
           // â”€â”€ Auto-generate title on first message â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
           if (isFirstMessage && currentSessionId && !titleGeneratedRef.current.has(currentSessionId)) {

@@ -1,5 +1,5 @@
 """
-Aetheris OS — Deep Research Agent (Sprint 4 — Real Streaming)
+ThinkSync OS — Deep Research Agent (Sprint 4 — Real Streaming)
 
 UPGRADES:
   - asyncio.wait(timeout=15s) for parallel searches — slow searches no longer block synthesis
@@ -15,7 +15,7 @@ from typing import AsyncGenerator, Dict, List
 from agents.web_research_agent import web_search
 from services.llm_service import generate, generate_chat_stream
 
-logger = logging.getLogger("aetheris.deep_research")
+logger = logging.getLogger("thinksync.deep_research")
 
 
 # ─── System prompts ───────────────────────────────────────────────────────────

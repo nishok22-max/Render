@@ -1,5 +1,5 @@
 """
-Aetheris OS — RAG Package
+ThinkSync OS — RAG Package
 Production-grade RAG pipeline with performance profiling and caching.
 """
 import time
@@ -8,7 +8,7 @@ import functools
 from collections import OrderedDict
 from typing import Any, Optional
 
-logger = logging.getLogger("aetheris.rag")
+logger = logging.getLogger("thinksync.rag")
 
 
 # ── Performance Profiling ─────────────────────────────────────────────────────
