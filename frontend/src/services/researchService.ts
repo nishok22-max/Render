@@ -1,4 +1,5 @@
 import { API_BASE_URL } from '../utils/constants';
+import { API_ROUTES } from './apiRoutes';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -91,7 +92,7 @@ export async function streamResearch(
 
   let resp: Response;
   try {
-    resp = await fetch(`${API_BASE_URL}/research`, {
+    resp = await fetch(`${API_BASE_URL}${API_ROUTES.RESEARCH}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query, depth, sources_limit: sourcesLimit }),
@@ -192,7 +193,7 @@ function mapPhase(phase: string, message: string, cb: ResearchCallbacks['onPhase
 
 export async function fetchSessions(): Promise<ResearchSession[]> {
   try {
-    const r = await fetch(`${API_BASE_URL}/research/sessions`);
+    const r = await fetch(`${API_BASE_URL}${API_ROUTES.RESEARCH_SESSIONS}`);
     if (!r.ok) return [];
     const data = await r.json();
     return data.sessions || [];
@@ -201,7 +202,7 @@ export async function fetchSessions(): Promise<ResearchSession[]> {
 
 export async function fetchSession(id: string): Promise<ResearchSessionFull | null> {
   try {
-    const r = await fetch(`${API_BASE_URL}/research/sessions/${id}`);
+    const r = await fetch(`${API_BASE_URL}${API_ROUTES.RESEARCH_SESSION(id)}`);
     if (!r.ok) return null;
     return await r.json();
   } catch { return null; }
@@ -209,13 +210,13 @@ export async function fetchSession(id: string): Promise<ResearchSessionFull | nu
 
 export async function deleteSession(id: string): Promise<boolean> {
   try {
-    const r = await fetch(`${API_BASE_URL}/research/sessions/${id}`, { method: 'DELETE' });
+    const r = await fetch(`${API_BASE_URL}${API_ROUTES.RESEARCH_SESSION(id)}`, { method: 'DELETE' });
     return r.ok;
   } catch { return false; }
 }
 
 export function exportSessionUrl(id: string, fmt: 'markdown' | 'json' = 'markdown') {
-  return `${API_BASE_URL}/research/sessions/${id}/export?fmt=${fmt}`;
+  return `${API_BASE_URL}${API_ROUTES.RESEARCH_SESSION_EXPORT(id, fmt)}`;
 }
 
 // ── Suggested topics ──────────────────────────────────────────────────────────

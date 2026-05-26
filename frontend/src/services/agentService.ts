@@ -1,5 +1,6 @@
 import api from './api';
 import { useAgentStore, type AgentInfo } from '../store/agentStore';
+import { API_ROUTES } from './apiRoutes';
 
 export const agentService = {
   /**
@@ -7,7 +8,7 @@ export const agentService = {
    */
   async fetchAgents(): Promise<AgentInfo[]> {
     try {
-      const { data } = await api.get('/agents');
+      const { data } = await api.get(API_ROUTES.AGENTS);
       const agents: AgentInfo[] = data.agents;
       
       // Update the global store

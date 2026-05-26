@@ -11,6 +11,9 @@ export const ROUTES = {
 } as const;
 
 // API config
+// VITE_API_URL must include the /api prefix.
+// Local dev:   http://localhost:8000/api
+// Production:  https://render-s8rx.onrender.com/api   (set in Render dashboard / render.yaml)
 export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 // File type categories

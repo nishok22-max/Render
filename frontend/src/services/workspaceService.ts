@@ -1,4 +1,5 @@
 import api from './api';
+import { API_ROUTES } from './apiRoutes';
 
 export interface DashboardStats {
   total_documents: number;
@@ -29,7 +30,7 @@ export interface Session {
 export const workspaceService = {
   async getStats(): Promise<DashboardStats> {
     try {
-      const { data } = await api.get('/analytics/dashboard');
+      const { data } = await api.get(API_ROUTES.ANALYTICS_DASHBOARD);
       return data;
     } catch {
       return { total_documents: 0, parsed_documents: 0, total_vectors: 0, total_sessions: 0 };
@@ -38,7 +39,7 @@ export const workspaceService = {
 
   async getDocuments(): Promise<Document[]> {
     try {
-      const { data } = await api.get('/documents');
+      const { data } = await api.get(API_ROUTES.DOCUMENTS);
       return data.documents || [];
     } catch {
       return [];
@@ -47,7 +48,7 @@ export const workspaceService = {
 
   async getSessions(limit = 6): Promise<Session[]> {
     try {
-      const { data } = await api.get('/sessions');
+      const { data } = await api.get(API_ROUTES.SESSIONS);
       return (data.sessions || []).slice(0, limit);
     } catch {
       return [];
@@ -55,7 +56,7 @@ export const workspaceService = {
   },
 
   async deleteDocument(id: string) {
-    await api.delete(`/documents/${id}`);
+    await api.delete(API_ROUTES.DOCUMENT(id));
   },
 
   formatFileSize(bytes: number): string {

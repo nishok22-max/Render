@@ -1,4 +1,5 @@
 import api from './api';
+import { API_ROUTES } from './apiRoutes';
 
 export interface UploadResponse {
   document_id: string;
@@ -16,7 +17,7 @@ export const uploadService = {
     const formData = new FormData();
     formData.append('file', file);
 
-    const { data } = await api.post('/upload', formData, {
+    const { data } = await api.post(API_ROUTES.UPLOAD, formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
       onUploadProgress: (event) => {
         if (event.total && onProgress) {
@@ -29,16 +30,16 @@ export const uploadService = {
   },
 
   async getDocuments() {
-    const { data } = await api.get('/documents');
+    const { data } = await api.get(API_ROUTES.DOCUMENTS);
     return data.documents;
   },
 
   async deleteDocument(documentId: string) {
-    await api.delete(`/documents/${documentId}`);
+    await api.delete(API_ROUTES.DOCUMENT(documentId));
   },
 
   async retryProcessing(documentId: string) {
-    const { data } = await api.post(`/documents/${documentId}/retry`);
+    const { data } = await api.post(API_ROUTES.DOCUMENT_RETRY(documentId));
     return data;
   },
 };

@@ -1,5 +1,6 @@
 import api from './api';
 import { API_BASE_URL } from '../utils/constants';
+import { API_ROUTES } from './apiRoutes';
 import type { Message } from '../store/chatStore';
 import type { ImageAttachment } from '../store/uploadStore';
 
@@ -66,7 +67,7 @@ export const chatService = {
     const abortController = new AbortController();
 
     try {
-      const response = await fetch(`${API_BASE_URL}/chat`, {
+      const response = await fetch(`${API_BASE_URL}${API_ROUTES.CHAT}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(request),
@@ -196,19 +197,19 @@ export const chatService = {
   /** List all chat sessions */
   async getSessions(type?: string) {
     const params = type ? { type } : {};
-    const { data } = await api.get('/sessions', { params });
+    const { data } = await api.get(API_ROUTES.SESSIONS, { params });
     return data.sessions || [];
   },
 
   /** Create a new session */
   async createSession(title: string = 'New Chat', type: string = 'chat') {
-    const { data } = await api.post('/sessions', { title, type });
+    const { data } = await api.post(API_ROUTES.SESSIONS, { title, type });
     return data; // { id, title, type }
   },
 
   /** Get messages for a session */
   async getSessionMessages(sessionId: string): Promise<Message[]> {
-    const { data } = await api.get(`/sessions/${sessionId}/messages`);
+    const { data } = await api.get(API_ROUTES.SESSION_MESSAGES(sessionId));
     return (data.messages || []).map((m: any) => ({
       id: m.id,
       role: m.role,
@@ -220,7 +221,7 @@ export const chatService = {
   /** Save a single message to a session */
   async saveMessage(sessionId: string, role: string, content: string) {
     try {
-      await api.post(`/sessions/${sessionId}/messages`, { role, content });
+      await api.post(API_ROUTES.SESSION_MESSAGES(sessionId), { role, content });
     } catch (e) {
       console.warn('[ThinkSync] Failed to persist message:', e);
     }
@@ -229,7 +230,7 @@ export const chatService = {
   /** Auto-generate a smart title for a session based on user's first message */
   async generateTitle(sessionId: string, message: string): Promise<string> {
     try {
-      const { data } = await api.post(`/sessions/${sessionId}/generate-title`, { message });
+      const { data } = await api.post(API_ROUTES.SESSION_GENERATE_TITLE(sessionId), { message });
       return data.title || message.slice(0, 40);
     } catch (e) {
       console.warn('[ThinkSync] Title generation failed:', e);
@@ -240,7 +241,7 @@ export const chatService = {
   /** Update session title (manual rename) */
   async updateSession(sessionId: string, title: string) {
     try {
-      await api.patch(`/sessions/${sessionId}`, { title });
+      await api.patch(API_ROUTES.SESSION(sessionId), { title });
     } catch (e) {
       console.warn('[ThinkSync] Failed to update session:', e);
     }
@@ -249,7 +250,7 @@ export const chatService = {
   /** Delete a session and its messages */
   async deleteSession(sessionId: string) {
     try {
-      await api.delete(`/sessions/${sessionId}`);
+      await api.delete(API_ROUTES.SESSION(sessionId));
     } catch (e) {
       console.warn('[ThinkSync] Failed to delete session:', e);
     }

@@ -5,6 +5,7 @@
  */
 import api from './api';
 import { API_BASE_URL } from '../utils/constants';
+import { API_ROUTES } from './apiRoutes';
 
 // â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
@@ -50,7 +51,7 @@ export const ragService = {
     const formData = new FormData();
     formData.append('file', file);
 
-    const { data } = await api.post('/rag/upload', formData, {
+    const { data } = await api.post(API_ROUTES.RAG_UPLOAD, formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
       onUploadProgress: (event) => {
         if (event.total && onProgress) {
@@ -87,10 +88,9 @@ export const ragService = {
     const abortController = new AbortController();
     let fullContent = '';
 
-    const baseUrl = API_BASE_URL.replace(/\/api$/, '');
-
     try {
-      const response = await fetch(`${baseUrl}/api/rag/query`, {
+      // API_BASE_URL already contains /api, so append the route directly.
+      const response = await fetch(`${API_BASE_URL}${API_ROUTES.RAG_QUERY}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question, top_k: topK || 5 }),
@@ -174,7 +174,7 @@ export const ragService = {
    * List all documents in the RAG KB.
    */
   async getDocuments(): Promise<RagDocument[]> {
-    const { data } = await api.get('/rag/documents');
+    const { data } = await api.get(API_ROUTES.RAG_DOCUMENTS);
     return data.documents || [];
   },
 
@@ -182,14 +182,14 @@ export const ragService = {
    * Delete a document from the RAG KB.
    */
   async deleteDocument(docId: string): Promise<void> {
-    await api.delete(`/rag/documents/${docId}`);
+    await api.delete(API_ROUTES.RAG_DOCUMENT(docId));
   },
 
   /**
    * Get KB statistics.
    */
   async getStats(): Promise<RagStats> {
-    const { data } = await api.get('/rag/stats');
+    const { data } = await api.get(API_ROUTES.RAG_STATS);
     return data;
   },
 
@@ -197,7 +197,7 @@ export const ragService = {
    * Get smart question suggestions.
    */
   async getSuggestions(): Promise<string[]> {
-    const { data } = await api.get('/rag/suggestions');
+    const { data } = await api.get(API_ROUTES.RAG_SUGGESTIONS);
     return data.suggestions || [];
   },
 };
